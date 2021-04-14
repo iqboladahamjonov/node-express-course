@@ -11,6 +11,7 @@ app.get('/about', (req, res) => {
 })
 
 app.all('*', (req, res) => {
+  //if i can't find the resource then i will send this response
   res.status(404).send('<h1>resource not found</h1>')
 })
 
